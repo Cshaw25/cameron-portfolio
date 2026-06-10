@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse at top left, #0d0d3b 0%, #1a1850 50%, #0f2060 100%);
+  position: relative;
+  overflow-x: hidden;
+}

@@ -1,0 +1,29 @@
+nav {
+  background: transparent; /*background: transparent; rgba(255,255,255, 0.05);*/
+  backdrop-filter: blur(8px); /* frosted glass effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 1rem 2rem;
+  border-radius: 9px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+  gap: 3rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  color: #e0e0ff;
+  transition: all 0.3s ease;
+
+}
+
+nav ul li a:hover {
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
+               0 0 20px rgba(180, 180, 255, 0.5);
+}
