@@ -3,6 +3,10 @@ import '../styles/Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin, faCode, faGraduationCap, faBriefcase, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Achievements from './Achievements';
+import Experience from './Experience';
+import Project from './Project';
+
 
 function Home() {
   useEffect(() => {
@@ -181,6 +185,11 @@ function Home() {
         </div>
 
       </div>
+      
+      <Project />
+      <Experience />
+      <Achievements />
+
     </main>
   );
 }

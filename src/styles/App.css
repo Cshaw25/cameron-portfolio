@@ -3,6 +3,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+    scrollbar-color: rgba(255, 255, 255, 0.15) #0d0d3b;
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0d0d3b;;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
 
 .app {
   min-height: 100vh;

@@ -1,0 +1,108 @@
+.experience{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    padding: clamp(2rem, 5vw, 6rem) clamp(1rem, 3vw, 4rem);
+    
+    
+}
+.exp-header {
+    color: white;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.exp-header-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 3rem;
+}
+.exp-line-1 {
+    width: clamp(150px, 25vw, 300px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.exp-line-2 {
+    width: clamp(100px, 17vw, 200px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.exp-line-3 {
+    width: clamp(50px, 8vw, 100px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.org-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.org {
+  font-weight: 700;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+.org.subtitle {
+  font-weight: 400;
+  font-size: clamp(0.8rem, 1vw, 0.95rem);
+  opacity: 0.8;
+}
+
+.job-date {
+  font-size: clamp(0.7rem, 1vw, 0.85rem);
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+.job-title {
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  color:#5eb8ff;
+}
+
+.job > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: clamp(0.7rem, 1vw, 0.85rem);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .org-row {
+    flex-direction: column;
+  }
+
+  .job-date {
+    white-space: normal;
+  }
+}

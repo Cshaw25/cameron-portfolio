@@ -1,0 +1,195 @@
+.project-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    padding: clamp(2rem, 5vw, 6rem) clamp(1rem, 3vw, 4rem);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+.project-header {
+    color: white;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.project-header-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 3rem;
+}
+
+.project-line-1 {
+    width: clamp(150px, 25vw, 300px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.project-line-2 {
+    width: clamp(100px, 17vw, 200px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.project-line-3 {
+    width: clamp(50px, 8vw, 100px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+.project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    padding: 4rem 2rem;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.project-card {
+    background: rgba(94, 184, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(94, 184, 255, 0.1);
+}
+
+.project-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card-title {
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 700;
+}
+
+.project-card-date {
+    color: #5eb8ff;
+    font-size: clamp(0.65rem, 1vw, 0.78rem);
+    font-weight: 600;
+}
+
+.project-card-desc {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0;
+}
+
+.project-card-desc li {
+    color: rgba(224, 224, 255, 0.7);
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    line-height: 1.5;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.project-card-desc li::before {
+    content: '›';
+    color: #5eb8ff;
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+.project-card-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-tool-tag {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e0e0ff;
+    padding: clamp(0.15rem, 0.5vh, 0.25rem) clamp(0.4rem, 1vw, 0.7rem);
+    border-radius: 4px;
+    font-size: clamp(0.6rem, 1vw, 0.75rem);
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+.project-tool-tag::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.25) 50%,
+        transparent 100%
+    );
+    animation: glare 4s ease-in-out infinite;
+    animation-delay: var(--glare-delay, 0s);
+}
+
+
+@keyframes glare {
+    0%   { left: -75%; opacity: 0; }
+    10%  { opacity: 1; }
+    40%  { left: 125%; opacity: 1; }
+    41%  { opacity: 0; }
+    100% { left: 125%; opacity: 0; }
+}
+
+.project-card-link {
+    color: #5eb8ff;
+    text-decoration: none;
+    font-size: clamp(0.7rem, 1vw, 0.82rem);
+    align-self: flex-end;
+    transition: opacity 0.2s ease;
+}
+
+.project-card-link:hover {
+    opacity: 0.7;
+}
+
+
+.project-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
