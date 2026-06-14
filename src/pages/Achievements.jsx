@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faMedal } from '@fortawesome/free-solid-svg-icons';
 
 
+
 const achievements = [
   { title: "Google Hackathon", desc: "Competed with TSU TIPS project", date: "2024" },
   { title: "TSU Ideathon", desc: "First place. Students are given a real-world problem and must design a software solution under time pressure, then pitch it to industry professionals.", date: "2024",medal: true },
@@ -37,7 +38,7 @@ function Achievements() {
   }, []);
 
   return (
-    <div className='achievements'>
+    <div className='achievements' >
       <h1 className="header fade-up" ref={headerRef}>Achievements & Involvement</h1>
       <div className='header-lines'>
         <div className='header-line-1'/>

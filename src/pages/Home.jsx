@@ -6,6 +6,8 @@ import { faChevronRight, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Achievements from './Achievements';
 import Experience from './Experience';
 import Project from './Project';
+import About from './About';
+import Contact from './Contact';
 
 
 function Home() {
@@ -186,9 +188,11 @@ function Home() {
 
       </div>
       
-      <Project />
       <Experience />
+      <Project />
       <Achievements />
+      <About />
+      <Contact />
 
     </main>
   );

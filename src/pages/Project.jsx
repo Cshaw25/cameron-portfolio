@@ -10,7 +10,7 @@ const projects = [
     desc: [
       "ML-powered NBA game prediction platform delivering win/loss probabilities",
       "Trained XGBoost model on 12,000+ historical games achieving 70% accuracy",
-      "Built responsive animated React UI with real-time game cards and probability visualizations",
+      "Built responsive animated React UI with live game cards and probability visualizations",
       "Designed REST API using FastAPI connecting React frontend to Python backend",
       "Deployed on AWS EC2, Amplify, and RDS"
     ],
@@ -22,9 +22,9 @@ const projects = [
     date: "In Progress",
     live: null,
     desc: [
-      "Full stack student marketplace platform — think Fiverr for college campuses",
-      "Students post side hustle services like tutoring, braiding, and homework help",
-      "Built for scale with a focus on clean UI and seamless booking experience",
+      "Full stack student marketplace platform (think Fiverr) for college campuses",
+      "Students post side hustle services like tutoring, braiding, homework help, etc...",
+      "Built for scale, clean UI specifically tailored for college entrepreneurs.",
     ],
     tools: ["React", "Java","SpringBoot", "MySQL","AWS Services"]
   },
@@ -34,9 +34,9 @@ const projects = [
     date: "2024",
     live: "https://cshaw25.github.io/TSU-TIPS-GDG-/frontend/templates/login.html",
     desc: [
-      "Full stack web app enabling upperclassmen to share campus guidance with new students",
+      "Full stack web app allowing upperclassmen to share campus guidance with new students",
       "Built responsive mobile-optimized interfaces with custom CSS animations",
-      "Engineered REST API integration layer for async data handling",
+      "Designed REST API layer for data handling",
       "Designed and managed MySQL relational database schema"
     ],
     tools: ["JavaScript", "HTML/CSS", "MySQL"]

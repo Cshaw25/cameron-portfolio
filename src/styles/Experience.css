@@ -46,8 +46,6 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
   padding: 2rem;
 
 }
@@ -56,6 +54,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
 }
 
 .org-row {
@@ -106,3 +107,129 @@
     white-space: normal;
   }
 }
+.job-bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+}
+.service-icon{
+    margin-top: .3rem;
+}
+
+.picker-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.picker{
+    display:flex;
+    gap:2rem;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    padding:1rem;
+    width: fit-content;
+    border-radius: 50px;
+    cursor:pointer;
+
+}
+.exp-tab{ 
+    background:transparent;
+}
+.picker-item {
+    color: rgba(224, 224, 255, 0.5);
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.picker-item:hover {
+    color: white;
+}
+
+.picker-item.active {   /* when u click on a tab 2 see */
+    color: white;
+    border-bottom: 2px solid #5eb8ff;
+}
+
+.services {     /* Services container */
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+.serv-header {  /* The how i can help header */
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.serv-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.serv-list div {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: rgba(224, 224, 255, 0.8);
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    padding: 0.8rem 1.2rem;
+    background: rgba(94, 184, 255, 0.05);
+    border: 1px solid rgba(94, 184, 255, 0.15);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.serv-list div:hover {   /* css for the actual services elements listed   */
+    background: rgba(94, 184, 255, 0.1);
+    color: white;
+    border-color: rgba(94, 184, 255, 0.3);
+    transform: translateX(6px);
+    text-shadow: 0 0 8px rgba(94, 184, 255, 0.2);
+}
+.service-icon1 {
+    margin-top: -0.1rem;
+    color: #5eb8ff;
+    font-size: 0.6rem;
+}
+.tab-fade {  /* animation only for the tab   */
+    animation: tabFadeIn 0.6s cubic-bezier(0.16, 1, 0.5, 1) forwards;
+}
+
+@keyframes tabFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.job-slot {
+    width: 80vw;
+    height: 30vh;
+}
+
+
+
+

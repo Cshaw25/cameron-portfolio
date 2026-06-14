@@ -6,10 +6,34 @@
     min-height: 100vh;
     color: white;
     padding: clamp(2rem, 5vw, 6rem) clamp(1rem, 3vw, 4rem);
+    position: relative;
+    background: radial-gradient(ellipse at top left, #0d0d3b 0%, #1a1850 50%, #0f2060 100%);
+    z-index: 1; /* creates a new stacking context above stars */
+}
+
+
+.achievements::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/afro-tech.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* adjust this */
+    
+}
+
+.achievements > * {
+    position: relative;
+    
 }
 
 .achievements-content{
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     border-radius: 50%;
     padding: clamp(3rem, 8vw, 8rem);
