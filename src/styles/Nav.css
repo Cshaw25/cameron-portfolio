@@ -11,7 +11,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   padding: 1rem;
-  gap: 3rem;
+  gap: clamp(1rem, 3vw, 3rem);
 }
 
 nav ul li a {
@@ -26,4 +26,49 @@ nav ul li a:hover {
   color: white;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
                0 0 20px rgba(180, 180, 255, 0.5);
+}
+.nav-contact {
+    display: flex;
+    margin-top:-0.2rem;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 0.3rem 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-contact:hover {
+    border-color: #5eb8ff;
+    box-shadow: 0 0 8px rgba(94, 184, 255, 0.2);
+}
+
+.nav-contact-link {
+    color: #e0e0ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.nav-icon {
+    color: rgba(224, 224, 255, 0.6);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-icon:hover {
+    color: #5eb8ff;
+    text-shadow: 0 0 8px rgba(94, 184, 255, 0.5);
+}
+
+
+@media (max-width: 400px) {
+    .abt-btn {
+        display: none;
+
+    }
+    .nav-contact{
+        margin-left: -1rem;
+    }
 }

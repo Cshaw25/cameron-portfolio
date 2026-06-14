@@ -55,7 +55,7 @@ function About() {
                 <div className="about-para-container fade-up" ref={contentRef}>
                     <span className="about-name">Hey I'm Cameron Shaw</span>
                     <div className="about-name-underline"/>
-                    <p>
+                    <p className="about-para">
                         I'm from Memphis, Tennessee, born in New Orleans, Louisiana. I'm a recent computer science graduate from Tennessee State University, pursuing a master's degree in computer science at Georgia Tech. My main focus is in web development and AI. I have skills ranging across the full stack including Java, Python, React, and MySQL. But truthfully, I simply enjoy designing and building helpful things for people to use in their everyday lives, whether that's a web app, mobile app, or something embedded.
 
                         I was a front end developer at MVTCP, a cancer research partnership between Meharry, TSU, and Vanderbilt. I would take in requests from the Community Advisory Board, update their website with improved responsiveness, and present changes and updates to stakeholders.

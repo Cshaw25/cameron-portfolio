@@ -188,11 +188,11 @@ function Home() {
 
       </div>
       
-      <Experience />
-      <Project />
-      <Achievements />
-      <About />
-      <Contact />
+    <div id="experience"><Experience /></div>
+    <div id="projects"><Project /></div>
+    <div id="achievements"><Achievements /></div>
+    <div id="about"><About /></div>
+    <div id="contact"><Contact /></div>
 
     </main>
   );

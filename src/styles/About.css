@@ -7,6 +7,11 @@
     color: white;
     padding: 4rem 2rem;
 }
+@media (max-width: 500px) {
+    .about {
+        padding: 1rem 0rem;   /* makes paragraph not over extend vertically and not use all horzontal space  */
+    }
+}
 .header{
     color: white;
     font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -44,9 +49,15 @@
     align-items: center;
     gap: 4rem;
     width: 100%;
-    max-width: 1100px;
+    max-width: min(73vw, 1400px);  
     padding: 2rem;
 }
+@media (max-width: 500px) {
+    .about-content {
+        padding: 0.5rem;
+    }
+}
+
 
 .about-para-container {
     flex: 2;
@@ -96,7 +107,7 @@
     margin-bottom: 1.2rem;
 }
 
-.about-image {
+.about-image {  /* the div scroller container  */
     flex: 1;
     height: 500px;
     border-radius: 12px;
@@ -109,6 +120,12 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+}
+
+@media (max-width: 1100px) {
+    .about-image {
+        display:none;   /* makes paragraph not over extend vertically and not use all horzontal space  */
+    }
 }
 
 .mobile-top {

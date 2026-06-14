@@ -36,3 +36,6 @@ html {
   position: relative;
   overflow-x: hidden;
 }
+html {
+    scroll-behavior: smooth;
+}
