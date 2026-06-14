@@ -12,13 +12,13 @@ function Contact() {
                 Contact Me <FontAwesomeIcon icon={faArrowRight} className="contact-arrow"/>
             </div>
             <div className="contact-methods">
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noreferrer" className="contact-icon">
+                <a href="https://www.linkedin.com/in/cameron-shaw-9bb847215" target="_blank" rel="noreferrer" className="contact-icon">
                     <FontAwesomeIcon icon={faLinkedin} />
                 </a>
                 <a href="https://github.com/cshaw25" target="_blank" rel="noreferrer" className="contact-icon">
                     <FontAwesomeIcon icon={faGithub} />
                 </a>
-                <a href="mailto:yourmail@email.com" className="contact-icon">
+                <a href="mailto:came980@gmail.com" className="contact-icon">
                     <FontAwesomeIcon icon={faEnvelope} />
                 </a>
             </div>
