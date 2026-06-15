@@ -12,7 +12,7 @@ import Contact from './Contact';
 
 function Home() {
   useEffect(() => {
-    const message = document.querySelector('.welcome-message');
+    const message = document.querySelector('.welcome-message'); {/* Greeting animation main greeting */}
     message.addEventListener('animationend', () => {
       message.classList.add('slide-left');
       setTimeout(() => {
@@ -20,7 +20,7 @@ function Home() {
       }, 2000);
     });
 
-    const subtitle = document.querySelector('.welcome-subtitle');
+    const subtitle = document.querySelector('.welcome-subtitle'); {/* Sub greeting "im glad your here" */}
     subtitle.addEventListener('animationend', () => {
       subtitle.classList.add('slide-right');
       setTimeout(() => {
@@ -36,6 +36,7 @@ function Home() {
     const content3 = document.querySelector('.content3');
     const content4 = document.querySelector('.content4');
 
+    // times the animation so that the boxes show up after/mid way through the greetin is done for
     setTimeout(() => {
       content.classList.add('unbox');
     }, 3700); // 3700ms after header animation starts
@@ -113,7 +114,7 @@ function Home() {
                 skills: ['Git', 'GitHub', 'VSCode', 'Kafka', 'REST APIs'],
               },
             ].map(({ label, className, skills }) => (
-              <div className='skill-category' key={label}>
+              <div className='skill-category' key={label}>  
                 <div className='skill-cat-label'>{label}</div>
                 <div className='skill-tags'>
                   {skills.map((s) => (
@@ -125,7 +126,7 @@ function Home() {
           </div>
         </div>
       </div>
-        <div className='content-slot'>
+        <div className='content-slot'> {/* The projects section */}
           <div className='content'>
             <h2 className='contentHeader'>Projects Overview</h2>
             <div className = "projects-box">
@@ -147,14 +148,14 @@ function Home() {
                 </div>
             </div>
 
-            <button className="project-details">See Details</button>
+            <a className="project-details" href="#projects">See Details</a>
           </div>
         </div>
 
-        <div className='content2-slot'>
+        <div className='content2-slot'> {/* Education, may add certifications as well*/}
           <div className='content2'>
             <h2 className='contentHeader'>Education</h2>
-            <div className="education-content">
+            <div className="education-content"> 
 
               <div className="education">
                 <div className="education-header">

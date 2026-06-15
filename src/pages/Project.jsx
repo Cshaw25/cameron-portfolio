@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/Project.css';
 
+// project data
 const projects = [
   {
     title: "TrueBets",
@@ -26,7 +27,7 @@ const projects = [
       "Students post side hustle services like tutoring, braiding, homework help, etc...",
       "Built for scale, clean UI specifically tailored for college entrepreneurs.",
     ],
-    tools: ["React", "Java","SpringBoot", "MySQL","AWS Services"]
+    tools: ["React", "Java", "SpringBoot", "MySQL", "AWS Services"]
   },
   {
     title: "TSU TIPS",
@@ -56,17 +57,19 @@ const projects = [
 ];
 
 function Project() {
-  const [visible, setVisible] = useState([]);
+  const [visible, setVisible] = useState([]); // tracks which cards are visible
   const refs = useRef([]);
 
+  // fade in each card as it enters the viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Number(entry.target.dataset.index);
+            // add to visible list if not already there
             setVisible((prev) => (prev.includes(index) ? prev : [...prev, index]));
-            observer.unobserve(entry.target);
+            observer.unobserve(entry.target); // stop watching once visible
           }
         });
       },
@@ -88,12 +91,14 @@ function Project() {
 
       <div className="project-list">
         {projects.map((project, index) => (
+          // card gets is-visible class once it enters viewport
           <div
             className={`project-card ${visible.includes(index) ? 'is-visible' : ''}`}
             key={index}
             ref={(el) => (refs.current[index] = el)}
             data-index={index}
           >
+            {/* only render image if project has one */}
             {project.image && (
               <img src={project.image} alt={project.title} className="project-card-img"/>
             )}
@@ -104,18 +109,21 @@ function Project() {
                 <span className="project-card-date">{project.date}</span>
               </div>
 
+              {/* bullet points */}
               <ul className="project-card-desc">
                 {project.desc.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
               </ul>
 
+              {/* tool tags */}
               <div className="project-card-tools">
                 {project.tools.map((tool, i) => (
                   <span className="project-tool-tag" key={i}>{tool}</span>
                 ))}
               </div>
 
+              {/* only show live link if project is deployed */}
               {project.live && (
                 <a href={project.live} target="_blank" rel="noreferrer" className="project-card-link">
                   View Live ↗

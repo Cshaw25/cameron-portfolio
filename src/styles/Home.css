@@ -288,6 +288,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 0.3rem;
+    text-decoration: none;
+
 }
 
 .project-details:hover {
