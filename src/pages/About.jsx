@@ -70,10 +70,10 @@ function About() {
                 <div className="about-image fade-up" ref={imageRef}>
                     <div className="mobile-top"/>
                     <div className="image-holder" ref={imageHolderRef}>
-                        <img src="/self.jpg" alt="Cameron Shaw" />
-                        <img src="/afro-tech2.jpg" alt="Cameron Shaw" />
-                        <img src="/HeadShot.jpg" alt="Cameron Shaw" />
-                        <img src="/self.jpg" alt="Cameron Shaw" />
+                        <img src={`${import.meta.env.BASE_URL}self.jpg`} alt="Cameron Shaw" />
+                        <img src={`${import.meta.env.BASE_URL}afro-tech2.jpg`} alt="Cameron Shaw" />
+                        <img src={`${import.meta.env.BASE_URL}HeadShot.jpg`} alt="Cameron Shaw" />
+                        <img src={`${import.meta.env.BASE_URL}self.jpg`} alt="Cameron Shaw" />
                     </div>
                     <div className="mobile-bottom"/>
                 </div>

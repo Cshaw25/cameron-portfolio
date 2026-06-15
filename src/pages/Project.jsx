@@ -5,7 +5,7 @@ import '../styles/Project.css';
 const projects = [
   {
     title: "TrueBets",
-    image: "/TrueBets.png",
+    image: `${import.meta.env.BASE_URL}TrueBets.png`,
     date: "2025",
     live: "https://truthnbets.com",
     desc: [
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "TSU TIPS",
-    image: "/TSU-TIPS.png",
+    image: `${import.meta.env.BASE_URL}TSU-TIPS.png`,
     date: "2024",
     live: "https://cshaw25.github.io/TSU-TIPS-GDG-/frontend/templates/login.html",
     desc: [
@@ -77,6 +77,7 @@ function Project() {
     );
 
     refs.current.forEach((el) => el && observer.observe(el));
+    
     return () => observer.disconnect();
   }, []);
 
@@ -123,7 +124,7 @@ function Project() {
                 ))}
               </div>
 
-              {/* only show live link if project is deployed */}
+              {/* only show live link if project is online */}
               {project.live && (
                 <a href={project.live} target="_blank" rel="noreferrer" className="project-card-link">
                   View Live ↗
