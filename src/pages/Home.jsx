@@ -3,6 +3,7 @@ import '../styles/Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin, faCode, faGraduationCap, faBriefcase, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Achievements from './Achievements';
 import Experience from './Experience';
 import Project from './Project';
@@ -79,7 +80,7 @@ function Home() {
                 <span className='tag'><FontAwesomeIcon icon={faUser} /> 21 Years Old</span>
                 <span className='tag'><FontAwesomeIcon icon={faBriefcase} /> Open to Work</span>
               </div>
-              <p className = "content-para">I build and design apps! Whether a prediction platform for sports fans, a tip app for college students, a website for cancer researchers. Full stack is my job, impact is my goal. I strive to build software that actually matter and could make a difference.</p>
+              <p className = "content-para">I build and design apps! <span id="content3-extended">Whether a prediction platform for sports fans, a tip app for college students, a website for cancer researchers. Full stack is my job. I strive to build software that actually matter and could make a difference.</span></p>
             </div>
           </div>
       </div>
@@ -132,19 +133,19 @@ function Home() {
             <div className = "projects-box">
                 <div className= "project">
                   <div className="project-name">TrueBets</div>
-                  <div>A web app that uses my custom trained AI model to predict NBA game outcomes. Peaked at <span className='highlight'>70% Accuracy</span>. Live at <a href="https://truthnbets.com/" target="_blank" rel="noreferrer" className='project-link'>truthnbets.com ↗</a></div>
+                  <p>A web app that uses my custom trained AI model to predict NBA game outcomes. Peaked at <span className='highlight'>70% Accuracy</span>. Live at <a href="https://truthnbets.com/" target="_blank" rel="noreferrer" className='project-link'>truthnbets.com  <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs"/></a></p>
                 </div>
                 <div className= "project">
                   <div className="project-name">Dashey</div>
-                  <div> I'm building a full stack student marketplace platform, allowing student entruepeners to post and allow students to book appointments for a variety of buisnesses. <span className='highlight'>In progress</span></div>
+                  <p> I'm building a full stack student marketplace platform, allowing student entruepeners to post and allow students to book appointments for a variety of buisnesses. <span className='highlight'>In progress</span></p>
                 </div>
                 <div className= "project">
                   <div className="project-name">TSU-TIPS</div>
-                  <div>Full stack web app for upperclassmen to share campus guidance with new students.Live at <a href="https://cshaw25.github.io/TSU-TIPS-GDG-/frontend/templates/login.html" target="_blank" rel="noreferrer" className='project-link'>cshaw25.github.io/TSU-TIPS-GDG ↗</a> </div>
+                  <p>Full stack web app for upperclassmen to share campus guidance with new students.Live at <a href="https://cshaw25.github.io/TSU-TIPS-GDG-/frontend/templates/login.html" target="_blank" rel="noreferrer" className='project-link'>cshaw25.github.io/TSU-TIPS-GDG  <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs"/></a> </p>
                 </div>
                 <div className= "project">
                   <div className="project-name">JPMorgan Simulation</div>
-                  <div>Production-style backend financial transaction system built with Kafka and Spring Boot</div>
+                  <p>Production-style backend financial transaction system built with Kafka and Spring Boot</p>
                 </div>
             </div>
 

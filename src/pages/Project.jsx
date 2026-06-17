@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/Project.css';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 // project data
 const projects = [
@@ -127,7 +130,7 @@ function Project() {
               {/* only show live link if project is online */}
               {project.live && (
                 <a href={project.live} target="_blank" rel="noreferrer" className="project-card-link">
-                  View Live ↗
+                  View Live  <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs"/>
                 </a>
               )}
             </div>
