@@ -55,7 +55,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity:1;
-    background-color: white;
     width: 96px;
     height: 96px;
     clip-path: ellipse(20% 25% at 50% 50%);
@@ -66,6 +65,13 @@
     drop-shadow(0 0 10px #FFE9A8) 
     drop-shadow(0 0 25px #F4C430);  
   
+}
+@media (hover: none) {
+    .wisp:has(.wisp-hit-box:hover) {
+        filter: 
+            drop-shadow(0 0 4px #FFE9A8) 
+            drop-shadow(0 0 14px #F4C430);
+    }
 }
 
 @media (max-width: 768px) {
