@@ -11,9 +11,31 @@
   filter: 
     drop-shadow(0 0 4px #FFE9A8) 
     drop-shadow(0 0 14px #F4C430);  
-  transition: transform 1.4s ease-out, filter 0.4s ease-out;
+  transition: transform 1.4s ease-out, filter 0.4s ease-out, opacity 0.4s ease-out;
+  animation: shadowPulseOnce 1.2s ease-out;
+  opacity: 0;
+  animation-delay: 6.2s; /* matches the amount of time it takes the wisp to fade in on mount note there is a 6 second delay before he animates in to give time for the "im glad your here thing" . (delay  --> wisp fades in --> his aura pulses)     */ 
 }
-
+.wispVisible{
+    opacity: 1;
+}
+@keyframes shadowPulseOnce {
+    0% {
+        filter: 
+            drop-shadow(0 0 4px #FFE9A8) 
+            drop-shadow(0 0 14px #F4C430);
+    }
+    50% {
+        filter: 
+            drop-shadow(0 0 10px #FFE9A8) 
+            drop-shadow(0 0 30px #F4C430);
+    }
+    100% {
+        filter: 
+            drop-shadow(0 0 4px #FFE9A8) 
+            drop-shadow(0 0 14px #F4C430);
+    }
+}
 @keyframes hover-bob {
   0% {
     transform: translateY(0px);
@@ -86,10 +108,7 @@
     padding: 0.3125rem;
     border-radius: 0.75rem;
     position: relative;
-}
-
-.wisp-prompt.closing {
-    animation: fadeOut 2s ease-out forwards;
+    animation: fade .4s ease-out;
 }
 
 .wisp-prompt::after {
@@ -142,6 +161,14 @@
         transform: translateY(0);
     }
 }
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.95;
+    }
+}
 
 @keyframes fadeOut {
     from {
@@ -150,6 +177,10 @@
     to {
         opacity: 0;
     }
+}
+
+.wisp-prompt.closing {
+    animation: fadeOut 2s ease-out forwards;
 }
 
 .command-opt li.closing {

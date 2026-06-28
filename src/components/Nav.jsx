@@ -9,7 +9,7 @@ function Nav(){
   return (
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}Cameron-Shaw-intern-resume.pdf`} target="_blank" rel="noreferrer">Resume</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a className="abt-btn" href="#about">About</a></li>
             <li className="nav-contact">

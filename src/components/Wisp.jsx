@@ -9,6 +9,9 @@ function Wisp({ starsEnabled, setStarsEnabled, factsEnabled, setFactsEnabled }){
     const wispIdlePath = `${import.meta.env.BASE_URL}wisp_idle.png`;
     const wispDownPath = `${import.meta.env.BASE_URL}wisp_down.png`;
     const wispUpPath = `${import.meta.env.BASE_URL}wisp_up.png`;
+
+    const [wispVisible,setWispVisible] = useState(false);
+    const [showGreeting,setShowGreeting] = useState(false);
     const [wispAni,setWispAni] = useState(wispIdlePath);
     const [wispFrame,setWispFrame] = useState(12); // represents the total frame count of the current animation. 
     const [frame, setFrame] = useState(0); // sets the current frame for the sprite
@@ -19,16 +22,16 @@ function Wisp({ starsEnabled, setStarsEnabled, factsEnabled, setFactsEnabled }){
     const [translateY, setTranslateY] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
     const [hasArrived,setHasArrived] = useState(false); // triggers when an animation ends 
-    const[isOverShooting,setIsOverShooting] = useState(false); 
-    const[overShootTarget,setOverShootTarget] = useState(0);
-    const [scrollVelocity,setScrollVelocity] = useState(0);
-    const [scrollY, setScrollY] = useState(0);
-    const [showOptions, setShowOptions] = useState(false);
+    const[isOverShooting,setIsOverShooting] = useState(false); // keeps track of if the animation where the wisp sloowly moves back to target after overshooting it
+    const[overShootTarget,setOverShootTarget] = useState(0); 
+    const [scrollVelocity,setScrollVelocity] = useState(0); // determines how fast the scroll was. (used as multiplier to determine how much overshoot the wisp will have)
+    const [scrollY, setScrollY] = useState(0); // Holds the current position of the scroll wheel
+    const [showOptions, setShowOptions] = useState(false); // controls if prompt options are visible 
     const [lightMode,setLightMode] = useState(false);
-    const [isClosing,setIsClosing] = useState(false);
-    const FADE_DURATION_MS = 2000;
-    const [prompt,setPrompt] = useState("What would you like me to do for you?");
-    const [factsClicked,setFactsClicked] = useState(false);
+    const [isClosing,setIsClosing] = useState(false); // State that controls when the fade out animation will begin. instead of just disappearing with no animation
+    const FADE_DURATION_MS = 2000; // how long it takes for the prompt options to disappear 
+    const [prompt,setPrompt] = useState("Im here to help!");
+    const [factsClicked,setFactsClicked] = useState(false); // the three states below help me know what prompt opt was clicked
     const [lightClicked,setLightClicked] = useState(false);
     const [bgClicked,setBgClicked] = useState(false);
 
@@ -44,6 +47,34 @@ function Wisp({ starsEnabled, setStarsEnabled, factsEnabled, setFactsEnabled }){
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        const wispInTimer = setTimeout(() => {
+            setWispVisible(true);
+            setPrompt("Im here to help!");
+            const greetingTimer = setTimeout(() => { // a second timer in the first one. it spawns the greeting after the wisp is done fading
+                    setPrompt("Im here to help!");
+                    setShowGreeting(true);
+                }, 1000);
+        }, 6000);
+
+        const greetingOutTimer = setTimeout(() => { 
+            setIsClosing(true); // gives the closing class to the div, once the class is given it starts fading out
+            const closeTimer = setTimeout(() => {
+                    setIsClosing(false); 
+                    setShowGreeting(false);
+                    setPrompt("What can I do for you?");
+                }, FADE_DURATION_MS);
+
+        }, 6000 + 3000); // 3 seconds after the greeting appears,
+
+        return () => {
+            clearTimeout(wispInTimer);
+            clearTimeout(greetingOutTimer);
+        };
+    }, []);
+
+
 
     useEffect(() => { // this use effect pre loads the image. which basically means, it makes sure computer know where image is so it can get to it quicker
         const idleImg = new Image();
@@ -194,7 +225,8 @@ function Wisp({ starsEnabled, setStarsEnabled, factsEnabled, setFactsEnabled }){
     }, [lightMode]);
     
 
-
+ 
+    // Happens whn the user clicks on a prompt option. it checks to  see which was clicked. -----------------
     const handleToggleClick = (option) => {
         if(option ==="toggle-facts"){
             setFactsClicked(true);
@@ -231,7 +263,7 @@ function Wisp({ starsEnabled, setStarsEnabled, factsEnabled, setFactsEnabled }){
                 setBgClicked(false);
                 setLightClicked(false);
                 setFactsClicked(false);
-                setPrompt("What would you like me to do for you");
+                setPrompt("What would you like me to do for you? ");
             }, FADE_DURATION_MS);
         } else {
             setShowOptions(true);
@@ -243,7 +275,7 @@ function Wisp({ starsEnabled, setStarsEnabled, factsEnabled, setFactsEnabled }){
 return (
     <div className='wisp-wrapper'>
         <div
-            className="wisp"
+            className={`wisp ${wispVisible ? "wispVisible" : ""}`}
             onTransitionEnd={() => {if (movingDown && !isOverShooting || movingUp && !isOverShooting) {setHasArrived(true);}}}
             style={{
                 backgroundImage: `url(${wispAni})`,
@@ -256,7 +288,13 @@ return (
             </div>
 
         </div>
-            {showOptions && (
+            {showGreeting && (
+                <div className="command-opt" style={{transform: `translateY(${translateY}px)`}}>
+                    <div className={`wisp-prompt ${isClosing ? "closing" : ""}`}>{prompt}</div>
+                </div>
+            )}
+
+            {showOptions && !showGreeting && (
                 <div className="command-opt" style={{transform: `translateY(${translateY}px)`}}>
                     <div className={`wisp-prompt ${isClosing ? "closing" : ""}`}>{prompt}</div>
                     <ul style={{ animationDuration: isClosing ? `${FADE_DURATION_MS}ms` : undefined }}>

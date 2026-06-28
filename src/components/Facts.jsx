@@ -15,7 +15,7 @@ const facts = [
 function Facts({factsEnabled}){
     const [factIndex, setFactIndex] = useState(0);
     const [factVisible, setFactVisible] = useState(false);
-    const [timer, setTimer] = useState(20000);  /* the timer is set low at first so the employer can see fun facts component fast. then it slows down */
+    const [timer, setTimer] = useState(100000);  /* the timer is set x at first so the employer can see fun facts component fast. then it slows down */
     let seen_fact = false;
     const [isFirstRender,setFirstRender] = useState(true);
 
@@ -36,7 +36,7 @@ function Facts({factsEnabled}){
                     });
 
                     setFactVisible(true);
-                    setTimer(60000);
+                    setTimer(90000);
                 }
             }, timer);
 
@@ -44,14 +44,14 @@ function Facts({factsEnabled}){
         }
     }, [factVisible]);
 
-    /* a second timer, it auto closes the fact (if visible) every 30 seconds */
+    /* a second timer, it auto closes the fact (if visible) every x seconds */
 
     useEffect(() => {
         if (!factVisible) return;
 
         const timeout = setTimeout(() => {
             setFactVisible(false);
-        }, 60000);
+        }, 90000);
 
         return () => clearTimeout(timeout);
     }, [factVisible]);

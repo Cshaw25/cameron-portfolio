@@ -43,7 +43,7 @@ html, body {
     --services-opt-border-hover:rgba(94, 184, 255, 0.3);
     --icon-color:rgba(224, 224, 255, 0.6);
     --nav-hover-color1:rgba(255, 255, 255, 0.8);
-    --nav-hover-color12:rgba(180, 180, 255, 0.5);
+    --nav-hover-color2:rgba(180, 180, 255, 0.5);
     --nav-bottom-color:rgba(255, 255, 255, 0.1);
     --ach-image-bg:radial-gradient(ellipse at top left, #0d0d3b 0%, #1a1850 50%, #0f2060 100%);
     --ach-opacity:0.2;
