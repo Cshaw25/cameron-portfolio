@@ -4,13 +4,13 @@
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    color: white;
+    color: var(--text-header);
     padding: clamp(2rem, 5vw, 6rem) clamp(1rem, 3vw, 4rem);
     
     
 }
 .exp-header {
-    color: white;
+    color: var(--text-header);
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     margin-bottom: 1rem;
     text-align: center;
@@ -26,19 +26,19 @@
 .exp-line-1 {
     width: clamp(150px, 25vw, 300px);
     height: 1px;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--header-lines-1);
 }
 
 .exp-line-2 {
     width: clamp(100px, 17vw, 200px);
     height: 1px;
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--header-lines-2);
 }
 
 .exp-line-3 {
     width: clamp(50px, 8vw, 100px);
     height: 1px;
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--header-lines-3);
 }
 
 .jobs {
@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background: rgba(0, 0, 0, 0.25);
+  background: var(--job-cards-bg); /*light back */
   backdrop-filter: blur(10px);
   padding: 2rem;
 }
@@ -87,7 +87,7 @@
 .job-title {
   font-weight: 600;
   font-size: clamp(0.85rem, 1.1vw, 1rem);
-  color:#5eb8ff;
+  color:var(--highlight-color);
 }
 
 .job > div:last-child {
@@ -126,7 +126,7 @@
 .picker{
     display:flex;
     gap:2rem;
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--job-cards-bg);
     backdrop-filter: blur(10px);
     padding:1rem;
     width: fit-content;
@@ -138,7 +138,7 @@
     background:transparent;
 }
 .picker-item {
-    color: rgba(224, 224, 255, 0.5);
+    color: rgba(224, 224, 255, 0.5); /* light back */
     cursor: pointer;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid transparent;
@@ -146,19 +146,19 @@
 }
 
 .picker-item:hover {
-    color: white;
+    color: var(--text-header);
 }
 
 .picker-item.active {   /* when u click on a tab 2 see */
-    color: white;
-    border-bottom: 2px solid #5eb8ff;
+    color: var(--text-header);
+    border-bottom: 2px solid var(--highlight-color);
 }
 
 .services {     /* Services container */
     display: flex;
     justify-content: center;
     margin-top: 3rem;
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--job-cards-bg);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
@@ -169,7 +169,7 @@
 }
 
 .serv-header {  /* The how i can help header */
-    color: white;
+    color: var(--text-header);
     font-size: clamp(1rem, 2vw, 1.4rem);
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -188,26 +188,26 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    color: rgba(224, 224, 255, 0.8);
+    color: var(--services-color);
     font-size: clamp(0.8rem, 1.2vw, 1rem);
     padding: 0.8rem 1.2rem;
-    background: rgba(94, 184, 255, 0.05);
-    border: 1px solid rgba(94, 184, 255, 0.15);
+    background: var(--services-opt-bg);
+    border: 1px solid var(--services-opt-border);
     border-radius: 8px;
     transition: all 0.3s ease;
     cursor: default;
 }
 
 .serv-list div:hover {   /* css for the actual services elements listed   */
-    background: rgba(94, 184, 255, 0.1);
-    color: white;
-    border-color: rgba(94, 184, 255, 0.3);
+    background: var(--services-opt-hover);
+    color: var(--text-header);
+    border-color: var(----services-opt-border-hover);
     transform: translateX(6px);
-    text-shadow: 0 0 8px rgba(94, 184, 255, 0.2);
+    text-shadow: 0 0 8px rgba(94, 184, 255, 0.2); /* light back */ 
 }
 .service-icon1 {
     margin-top: -0.1rem;
-    color: #5eb8ff;
+    color: var(--highlight-color);
     font-size: 0.6rem;
 }
 .tab-fade {  /* animation only for the tab   */

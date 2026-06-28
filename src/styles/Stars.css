@@ -10,7 +10,7 @@
 
 .star {
   position: absolute;
-  background: white;
+  background:var(--bg-circle-color);
   border-radius: 50%;
   animation: twinkle ease-in-out forwards;
   opacity: 0;

@@ -2,4 +2,100 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  
+}
+
+html, body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --wisp-left: 1.2vw;
+    --main-bg: radial-gradient(ellipse at top left, #0d0d3b 0%, #1a1850 50%, #0f2060 100%); /* the bg color of the entire website */
+    --bg-circle-color: white;
+    --bg-color: #0f1230;  
+    --text-header: white; /* color of most header text */
+    --para-color:rgba(255, 255, 255, 0.904);   /* color of most paragraph text */
+    --secondary-para-color:rgba(243, 243, 255, 0.784); /* color of other paragraph text, where color is slightly grayer */ 
+    --tag-color:#e0e0ff;   /* text color for tags*/
+    --tag-bg:rgba(255, 255, 255, 0.08);
+    --tag-border:rgba(255, 255, 255, 0.15);
+    --scrollbar-track-color:#0d0d3b;
+    --scroll-color:rgba(255, 255, 255, 0.15);
+    --project-overview-color:rgba(127, 127, 127, 0.03);
+    --highlight-color:#5eb8ff;
+    --secondary-highlight-dark:#5eb9ffe9; /* same as highlight above but a lil darker */
+    --secondary-shaded-subtitle:rgba(224, 224, 255, 0.4);  /* even more grayed subtitle  */
+    --secondary-subtitle: rgba(224, 224, 255, 0.7); /* grayed subtitle  */
+    --subtle-divider:rgba(255, 255, 255, 0.06);
+    --header-lines-1:rgba(255, 255, 255, 0.5);
+    --header-lines-2:rgba(255, 255, 255, 0.3);
+    --header-lines-3:rgba(255, 255, 255, 0.15);
+    --job-cards-bg:rgba(0, 0, 0, 0.25); /* the frosted semi transparent dark bg shared by most of all cards */ 
+    --overview-cards-bg: rgba(0, 0, 0, 0.25);
+    --ach-bg: rgba(0, 0, 0, 0.6); /* the dark background for the acheivements content */ 
+    --services-color:rgba(224, 224, 255, 0.8);
+    --services-opt-bg:rgba(94, 184, 255, 0.05); /* also shared by project option background */ 
+    --services-opt-border:rgba(94, 184, 255, 0.15);
+    --services-opt-hover:rgba(94, 184, 255, 0.1);
+    --services-opt-border-hover:rgba(94, 184, 255, 0.3);
+    --icon-color:rgba(224, 224, 255, 0.6);
+    --nav-hover-color1:rgba(255, 255, 255, 0.8);
+    --nav-hover-color12:rgba(180, 180, 255, 0.5);
+    --nav-bottom-color:rgba(255, 255, 255, 0.1);
+    --ach-image-bg:radial-gradient(ellipse at top left, #0d0d3b 0%, #1a1850 50%, #0f2060 100%);
+    --ach-opacity:0.2;
+    --glow:rgba(94, 184, 255, 0.5);
+    --dot-border:#0d0d3b;
+    --my-text:white;
+    --ach-image: url('/afro-tech.jpg');
+    --about-text:rgba(243, 243, 255, 0.784);
+    --facts-dark-border:#0d1040;
+}
+
+.light-mode {
+    --main-bg: radial-gradient(ellipse at top left, #fff8ed 0%, #fbe8cf 90%, #f5d4a8 100%);
+    --bg-circle-color: white;
+    --bg-color: #fdf6ec;
+    --text-header: #3a2a1a;
+    --para-color: rgba(58, 42, 26, 0.9);
+    --secondary-para-color: rgba(74, 56, 38, 0.78);
+    --tag-color: #8a5a2a;
+    --tag-bg: rgba(58, 42, 26, 0.06);
+    --tag-border: rgba(58, 42, 26, 0.15);
+    --scrollbar-track-color:#fbe8cf;
+    --scroll-color: rgba(58, 42, 26, 0.15);
+    --project-overview-color: rgba(120, 100, 80, 0.05);
+    --highlight-color: #c2701f;
+    --secondary-highlight-dark: #a8601adb;
+    --secondary-shaded-subtitle: rgba(90, 65, 40, 0.4);
+    --secondary-subtitle: rgba(90, 65, 40, 0.65);
+    --subtle-divider: rgba(58, 42, 26, 0.08);
+    --header-lines-1: rgba(58, 42, 26, 0.5);
+    --header-lines-2: rgba(58, 42, 26, 0.3);
+    --header-lines-3: rgba(58, 42, 26, 0.15);
+    --overview-cards-bg: rgba(255, 255, 255, 0.55);
+    --job-cards-bg: rgba(255, 255, 255, 0.55);
+    --ach-bg: rgba(255, 250, 240, 0.8);
+    --services-color: rgba(90, 65, 40, 0.8);
+    --services-opt-bg: rgba(194, 112, 31, 0.07);
+    --services-opt-border: rgba(194, 112, 31, 0.2);
+    --services-opt-hover: rgba(194, 112, 31, 0.13);
+    --services-opt-border-hover: rgba(194, 112, 31, 0.35);
+    --icon-color:rgba(58, 42, 26, 0.45);
+    --nav-hover-color1:rgba(196, 60, 20, 0.45);
+    --nav-hover-color2:rgba(224, 90, 30, 0.45);
+    --nav-bottom-color:rgba(58, 42, 26, 0.15);
+    --ach-image-bg:transparent;
+    --ach-opacity:1;
+    --glow:rgba(196, 60, 20, 0.45);
+    --dot-border:rgba(194, 112, 31, 0.2);
+    --my-text:white;
+    --ach-image: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%),
+        url('/afro-tech.jpg');
+    --about-text:rgba(58, 42, 26, 0.9);
+    --facts-dark-border:rgba(196, 60, 20, 0.45);
+
 }

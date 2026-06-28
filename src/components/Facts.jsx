@@ -12,33 +12,36 @@ const facts = [
   "For Cameron's final project in his game programming course (awarded one of the highest scores in the class), he created a 2D top-down RPG game demo called Scription. (See more on Github) "
 ];
 
-function Facts(){
+function Facts({factsEnabled}){
     const [factIndex, setFactIndex] = useState(0);
     const [factVisible, setFactVisible] = useState(false);
     const [timer, setTimer] = useState(20000);  /* the timer is set low at first so the employer can see fun facts component fast. then it slows down */
     let seen_fact = false;
+    const [isFirstRender,setFirstRender] = useState(true);
 
 
     /* randomly picks an index, in return section it will accesss that rand indx */
     useEffect(() => {
-        const interval = setInterval(() => {
-            seen_fact = true;
-            if (!factVisible) {
-                setFactIndex(prevIndex => {
-                    let newIndex;
-                    do {
-                        newIndex = Math.floor(Math.random() * facts.length);
-                    } while (newIndex === prevIndex);
+        if(factsEnabled){
+            const interval = setInterval(() => {
+                seen_fact = true;
+                if (!factVisible && factsEnabled) {
+                    setFactIndex(prevIndex => {
+                        let newIndex;
+                        do {
+                            newIndex = Math.floor(Math.random() * facts.length);
+                        } while (newIndex === prevIndex);
 
-                    return newIndex;
-                });
+                        return newIndex;
+                    });
 
-                setFactVisible(true);
-                setTimer(40000);
-            }
-        }, timer);
+                    setFactVisible(true);
+                    setTimer(60000);
+                }
+            }, timer);
 
-        return () => clearInterval(interval);
+            return () => clearInterval(interval);
+        }
     }, [factVisible]);
 
     /* a second timer, it auto closes the fact (if visible) every 30 seconds */
@@ -48,10 +51,24 @@ function Facts(){
 
         const timeout = setTimeout(() => {
             setFactVisible(false);
-        }, 40000);
+        }, 60000);
 
         return () => clearTimeout(timeout);
     }, [factVisible]);
+
+
+    useEffect(()=>{
+    if (isFirstRender) {
+        setFirstRender(false);
+        return; // skip everything below on mount
+    }
+        if(factsEnabled){
+            setFactVisible(true);
+            let newIndex = Math.floor(Math.random() * facts.length); 
+            setFactIndex(newIndex);}
+        else{setFactVisible(false);}
+        
+    },[factsEnabled])
 
 
 

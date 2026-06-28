@@ -1,7 +1,7 @@
 nav {
   background: transparent; /*background: transparent; rgba(255,255,255, 0.05);*/
   backdrop-filter: blur(8px); /* frosted glass effect */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--nav-bottom-color); /* rgba(58, 42, 26, 0.15) */
   margin: 1rem 2rem;
   border-radius: 9px;
 }
@@ -17,22 +17,22 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: inherit;
-  color: #e0e0ff;
+  color: var(--tag-color);
   transition: all 0.3s ease;
 
 }
 
 nav ul li a:hover {
-  color: white;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
-               0 0 20px rgba(180, 180, 255, 0.5);
+  color: var(--text-header);
+  text-shadow: 0 0 8px var(--nav-hover-color1),
+               0 0 20px var(--nav-hover-color2);
 }
 .nav-contact {
     display: flex;
     margin-top:-0.2rem;
     align-items: center;
     gap: 0.6rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2); /*light back */
     border-radius: 999px;
     padding: 0.3rem 1rem;
     transition: all 0.3s ease;
@@ -40,26 +40,26 @@ nav ul li a:hover {
 }
 
 .nav-contact:hover {
-    border-color: #5eb8ff;
+    border-color: var(--highlight-color);
     box-shadow: 0 0 8px rgba(94, 184, 255, 0.2);
 }
 
 .nav-contact-link {
-    color: #e0e0ff;
+    color: var(--tag-color);
     text-decoration: none;
     font-size: 0.9rem;
 }
 
 .nav-icon {
-    color: rgba(224, 224, 255, 0.6);
+    color: var(--icon-color);
     font-size: 0.85rem;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .nav-icon:hover {
-    color: #5eb8ff;
-    text-shadow: 0 0 8px rgba(94, 184, 255, 0.5);
+    color: var(--highlight-color);
+    text-shadow: 0 0 8px rgba(var(--highlight-color-rgb), 0.5);
 }
 
 

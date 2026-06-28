@@ -21,7 +21,7 @@
 .contact-button {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 700;
-    color: white;
+    color: var(--text-header);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -32,7 +32,7 @@
 }
 
 .contact-arrow {
-    color: #5eb8ff;
+    color: var(--highlight-color);
     animation: arrowPulse 1.5s ease-in-out infinite;
 }
 
@@ -55,8 +55,8 @@
 }
 
 .contact-icon:hover {
-    color: #5eb8ff;
-    text-shadow: 0 0 12px rgba(94, 184, 255, 0.5);
+    color: var(--highlight-color);
+    text-shadow: 0 0 12px rgba(94, 184, 255, 0.5); /* light back */
     transform: translateY(-4px);
 }
 .footer-copy {

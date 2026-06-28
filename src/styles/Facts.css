@@ -9,7 +9,7 @@
     width: clamp(14rem, 20rem, 20rem);
     border-radius:12px;
     padding:1rem;
-    border: 3px solid #0d1040;
+    border: 3px solid var(--facts-dark-border);
     pointer-events: none;
     transition: opacity 0.4s ease;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -39,7 +39,7 @@
   height: 1.2rem;
   box-sizing: border-box;
   border-radius: 50%;
-  background-color: #5eb8ff;
+  background-color: var(--highlight-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +55,7 @@
 
 .close-out:hover {
   transform: scale(1.2);
-  background-color: #0d1040;
+  background-color: var(--facts-dark-border);
 }
 .head {
   color: #0d1040;
@@ -71,7 +71,6 @@
 .underline{
     width: clamp(70px, 15vw, 150px);
     height: 1px;
-    background: #5eb8ff;
-    
+    background: var(--highlight-color);
     margin-bottom:0.5rem;
 }

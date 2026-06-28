@@ -39,7 +39,7 @@ function Achievements() {
 
   return (
     <div className='achievements' >
-      <h1 className="header fade-up" ref={headerRef}>Achievements & Involvement</h1>
+      <h1 className="header-ach fade-up" ref={headerRef}>Achievements & Involvement</h1>
       <div className='header-lines'>
         <div className='header-line-1'/>
         <div className='header-line-2'/>

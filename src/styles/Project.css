@@ -6,11 +6,11 @@
     min-height: 100vh;
     color: white;
     padding: clamp(2rem, 5vw, 6rem) clamp(1rem, 3vw, 4rem);
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.25); /*light back */
     backdrop-filter: blur(10px);
 }
 .project-header {
-    color: white;
+    color: var(--text-header);
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     margin-bottom: 1rem;
     text-align: center;
@@ -27,19 +27,19 @@
 .project-line-1 {
     width: clamp(150px, 25vw, 300px);
     height: 1px;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--header-lines-1);
 }
 
 .project-line-2 {
     width: clamp(100px, 17vw, 200px);
     height: 1px;
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--header-lines-2);
 }
 
 .project-line-3 {
     width: clamp(50px, 8vw, 100px);
     height: 1px;
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--header-lines-3);
 }
 .project-section {
     display: flex;
@@ -47,9 +47,9 @@
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    color: white;
+    color: var(--text-header);
     padding: 4rem 2rem;
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--job-cards-bg);
 }
 
 .project-list {
@@ -61,8 +61,8 @@
 }
 
 .project-card {
-    background: rgba(94, 184, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--services-opt-bg);
+    border: 1px solid var(--services-opt-border);
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -73,7 +73,7 @@
 
 .project-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(94, 184, 255, 0.1);
+    box-shadow: 0 8px 24px var(--services-opt-hover);
 }
 
 .project-card-img {
@@ -81,7 +81,7 @@
     height: 200px;
     object-fit: cover;
     object-position: top;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06); /*light back */
 }
 
 .project-card-body {
@@ -98,13 +98,13 @@
 }
 
 .project-card-title {
-    color: white;
+    color: var(--text-header);
     font-size: clamp(1rem, 2vw, 1.3rem);
     font-weight: 700;
 }
 
 .project-card-date {
-    color: #5eb8ff;
+    color: var(--highlight-color);
     font-size: clamp(0.65rem, 1vw, 0.78rem);
     font-weight: 600;
 }
@@ -118,7 +118,7 @@
 }
 
 .project-card-desc li {
-    color: rgba(224, 224, 255, 0.7);
+    color:var(--secondary-subtitle);
     font-size: clamp(0.7rem, 1vw, 0.85rem);
     line-height: 1.5;
     padding-left: 1rem;
@@ -127,7 +127,7 @@
 
 .project-card-desc li::before {
     content: '›';
-    color: #5eb8ff;
+    color: var(--highlight-color);
     position: absolute;
     left: 0;
     font-size: 1rem;
@@ -141,9 +141,9 @@
 }
 
 .project-tool-tag {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #e0e0ff;
+    background: var(--tag-bg);
+    border: 1px solid var(--tag-border);
+    color: var(--tag-color);
     padding: clamp(0.15rem, 0.5vh, 0.25rem) clamp(0.4rem, 1vw, 0.7rem);
     border-radius: 4px;
     font-size: clamp(0.6rem, 1vw, 0.75rem);
@@ -178,7 +178,7 @@
 }
 
 .project-card-link {
-    color: #5eb8ff;
+    color: var(--highlight-color);
     text-decoration: none;
     font-size: clamp(0.7rem, 1vw, 0.82rem);
     align-self: flex-end;

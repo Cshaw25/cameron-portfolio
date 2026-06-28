@@ -1,0 +1,161 @@
+.wisp {
+  position: absolute;
+  top: 90px;
+  left: var(--wisp-left);
+  width: 96px;
+  height: 96px;
+  background-size: 96px;  /* important - makes sure u also scale the whole image and not just the box its in*/
+  background-repeat: no-repeat;
+  z-index: 3;
+  image-rendering: pixelated;
+  filter: 
+    drop-shadow(0 0 4px #FFE9A8) 
+    drop-shadow(0 0 14px #F4C430);  
+  transition: transform 1.4s ease-out, filter 0.4s ease-out;
+}
+
+@keyframes hover-bob {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.wisp-hit-box {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity:1;
+    background-color: white;
+    width: 96px;
+    height: 96px;
+    clip-path: ellipse(20% 25% at 50% 50%);
+    background: transparent;
+}
+.wisp:has(.wisp-hit-box:hover) {
+      filter: 
+    drop-shadow(0 0 10px #FFE9A8) 
+    drop-shadow(0 0 25px #F4C430);  
+  
+}
+
+@media (max-width: 768px) {
+    .wisp {
+        width: 64px;
+        height: 64px;
+        background-size: 64px;
+        left: -11px;
+    }
+
+    .wisp-hit-box {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.command-opt {
+    padding: 0.875rem 1.125rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    text-wrap: nowrap;
+    top: 14vh;
+    left: calc(var(--wisp-left) + 3.3rem);
+    transition: transform 1.4s ease-out, filter 0.4s ease-out;
+    z-index: 3;
+}
+@media (max-width: 768px) {
+    .command-opt{
+        top:12vh;
+        left:20px;
+    }
+}
+
+.wisp-prompt {
+    background-color: white;
+    padding: 0.3125rem;
+    border-radius: 0.75rem;
+    position: relative;
+}
+
+.wisp-prompt.closing {
+    animation: fadeOut 2s ease-out forwards;
+}
+
+.wisp-prompt::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-right: 0.625rem solid white;
+}
+
+.command-opt ul {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    list-style: none;
+    color: #2a2a40;
+    border-radius: 5px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.command-opt ul li {
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    background-color: #f0f0f5;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.command-opt ul li:hover {
+    background-color: orange;
+    transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 0.95;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.command-opt li.closing {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+.command-opt li.closing.lingers {
+    animation-delay: 0.2s;
+}

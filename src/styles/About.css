@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    color: white;
+    color: var(--text-header);
     padding: 4rem 2rem;
 }
 @media (max-width: 500px) {
@@ -13,7 +13,7 @@
     }
 }
 .header{
-    color: white;
+    color: var(--text-header);
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     margin-bottom: 1rem;
 }
@@ -29,19 +29,19 @@
 .header-line-1 {
     width: clamp(150px, 25vw, 300px);
     height: 1px;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--header-lines-1);
 }
 
 .header-line-2 {
     width: clamp(100px, 17vw, 200px);
     height: 1px;
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--header-lines-2);
 }
 
 .header-line-3 {
     width: clamp(50px, 8vw, 100px);
     height: 1px;
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--header-lines-3);
 }
 .about-content {
     display: flex;
@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: #0d1040;
+    background-color: var(--bg-color);
     z-index:5;
     padding:2rem;
     border-radius: 12px;
@@ -72,7 +72,7 @@
 }
 
 .about-para-container p {
-    color: rgba(243, 243, 255, 0.784);
+    color: var(--about-text);
     font-size: clamp(0.85rem, 1.2vw, 1rem);
     line-height: 1.8;
 }
@@ -96,14 +96,14 @@
     }
 }
 .about-name {
-    color: white;
+    color: var(--text-header);
     font-size: 2em;
     font-weight: 700;
 }
 .about-name-underline {
     width: 70%;
     height: 1px;
-    background: rgba(255, 255, 255, 0.4);
+    background: var(--header-lines-2);
     margin-bottom: 1.2rem;
 }
 
@@ -114,7 +114,7 @@
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
     flex-shrink: 0;
-    background-color: #0d1040;
+    background-color: #0d1040; /* light back */
     z-index: 5;
     display: flex;
     flex-direction: column;
