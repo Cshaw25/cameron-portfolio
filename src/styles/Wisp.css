@@ -48,7 +48,7 @@
 
 @media (max-width: 768px) {
     .wisp {
-        width: 64px;
+        width: 64px; /* scales down but in 32 intervals, remember must be multiple of 32 cus thats the sprite sheet size */
         height: 64px;
         background-size: 64px;
         left: -11px;
@@ -63,21 +63,21 @@
 .command-opt {
     padding: 0.875rem 1.125rem;
     border-radius: 1rem;
-    font-size: 1rem;
+    font-size: clamp(0.7rem, .8vw + 0.2rem, 1.25rem);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     position: absolute;
     text-wrap: nowrap;
-    top: 14vh;
-    left: calc(var(--wisp-left) + 3.3rem);
+    top: 6.5rem; /* was 14vh */
+    left: calc(var(--wisp-left) + 3.3rem); /* depends on on where wisp is */ 
     transition: transform 1.4s ease-out, filter 0.4s ease-out;
-    z-index: 3;
+    z-index: 10;
 }
 @media (max-width: 768px) {
     .command-opt{
         top:12vh;
-        left:20px;
+        left:20px; /* this number aligns the command prompt box to the right of the wisp after the wisp shrinks  */ 
     }
 }
 
