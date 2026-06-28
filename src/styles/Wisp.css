@@ -12,7 +12,7 @@
     drop-shadow(0 0 4px #FFE9A8) 
     drop-shadow(0 0 14px #F4C430);  
   transition: transform 1.4s ease-out, filter 0.4s ease-out, opacity 0.4s ease-out;
-  animation: shadowPulseOnce 1.2s ease-out;
+  animation: shadowPulseOnce .5s ease-out;
   opacity: 0;
   animation-delay: 6.2s; /* matches the amount of time it takes the wisp to fade in on mount note there is a 6 second delay before he animates in to give time for the "im glad your here thing" . (delay  --> wisp fades in --> his aura pulses)     */ 
 }
@@ -27,8 +27,8 @@
     }
     50% {
         filter: 
-            drop-shadow(0 0 10px #FFE9A8) 
-            drop-shadow(0 0 30px #F4C430);
+            drop-shadow(0 0 15px #FFE9A8) 
+            drop-shadow(0 0 35px #F4C430);
     }
     100% {
         filter: 
