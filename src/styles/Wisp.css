@@ -61,17 +61,13 @@
     background: transparent;
 }
 .wisp:has(.wisp-hit-box:hover) {
-      filter: 
-    drop-shadow(0 0 10px #FFE9A8) 
-    drop-shadow(0 0 25px #F4C430);  
+    filter: 
+        drop-shadow(0 0 10px #FFE9A8) 
+        drop-shadow(0 0 25px #F4C430);  
   
 }
-@media (hover: none) {
-    .wisp:has(.wisp-hit-box:hover) {
-        filter: 
-            drop-shadow(0 0 4px #FFE9A8) 
-            drop-shadow(0 0 14px #F4C430);
-    }
+.wisp-hit-box:hover{
+    background: transparent;
 }
 
 @media (max-width: 768px) {

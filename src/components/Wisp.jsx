@@ -30,7 +30,7 @@ function Wisp({ starsEnabled, setStarsEnabled, factsEnabled, setFactsEnabled }){
     const [lightMode,setLightMode] = useState(false);
     const [isClosing,setIsClosing] = useState(false); // State that controls when the fade out animation will begin. instead of just disappearing with no animation
     const FADE_DURATION_MS = 2000; // how long it takes for the prompt options to disappear 
-    const [prompt,setPrompt] = useState("Im here to help!");
+    const [prompt,setPrompt] = useState("Click me, im here to help!");
     const [factsClicked,setFactsClicked] = useState(false); // the three states below help me know what prompt opt was clicked
     const [lightClicked,setLightClicked] = useState(false);
     const [bgClicked,setBgClicked] = useState(false);
@@ -53,7 +53,7 @@ function Wisp({ starsEnabled, setStarsEnabled, factsEnabled, setFactsEnabled }){
             setWispVisible(true);
             setPrompt("Im here to help!");
             const greetingTimer = setTimeout(() => { // a second timer in the first one. it spawns the greeting after the wisp is done fading
-                    setPrompt("Im here to help!");
+                    setPrompt("Click me, im here to help!");
                     setShowGreeting(true);
                 }, 1000);
         }, 6000);
