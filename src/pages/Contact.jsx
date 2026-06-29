@@ -9,7 +9,7 @@ function Contact() {
     <div className='contact'>
         <div className="contact-content">
             <div className="contact-button">
-                Contact Me <FontAwesomeIcon icon={faArrowRight} className="contact-arrow"/>
+                Contact Me <FontAwesomeIcon icon={faArrowRight} className="contact-arrow"/> {/* doesnt actually lead anywehre only links do */}
             </div>
             <div className="contact-methods">
                 <a href="https://www.linkedin.com/in/cameron-shaw-9bb847215" target="_blank" rel="noreferrer" className="contact-icon">

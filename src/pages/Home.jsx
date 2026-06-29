@@ -80,7 +80,7 @@ function Home() {
                 <span className='tag'><FontAwesomeIcon icon={faUser} /> 21 Years Old</span>
                 <span className='tag'><FontAwesomeIcon icon={faBriefcase} /> Open to Work</span>
               </div>
-              <p className = "content-para">I build and design apps! <span id="content3-extended">Whether a prediction platform for sports fans, a tip app for college students, a website for cancer researchers. Full stack is my job. I strive to build software that actually matter and could make a difference.</span></p>
+              <p className="content-para">I build and design apps! <span id="content3-extended">Whether it's a prediction platform for sports fans, a tip app for college students, or a website for cancer researchers, full-stack is my job. I strive to build software that actually matters and could make a difference.</span></p>
             </div>
           </div>
       </div>
