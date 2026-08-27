@@ -78,10 +78,10 @@ function Experience() {
               Experience
             </div>
             <div
-              className={`picker-item ${activeTab === 'services' ? 'active' : ''}`}
-              onClick={() => setActiveTab('services')}
+              className={`picker-item ${activeTab === 'certifications' ? 'active' : ''}`}
+              onClick={() => setActiveTab('certifications')}
             >
-              Services
+              Certifications
             </div>
           </div>
         </div>
@@ -133,16 +133,24 @@ function Experience() {
           </div>
         )}
 
-        {/* services list */}
-        {activeTab === 'services' && (
-          <div className="services tab-fade" key="services">
-            <div className="serv-header">How I Can Help:</div>
-            <div className="serv-list">
-              {["Front-end Development", "Back-end Development", "Full Stack Development", "Database Management", "AI Integration"].map((service, i) => (
-                <div key={i}>
-                  <FontAwesomeIcon icon={faChevronRight} className='service-icon1'/> {service}
-                </div>
-              ))}
+        {/* certifications list */}
+        {activeTab === 'certifications' && (
+          <div className="jobs tab-fade" key="certifications">
+            <div className="job fade-up visible">
+              <div className="org-row">
+                <div className="org">Amazon Web Services (AWS)</div>
+                <div className="job-date">August 2026</div>
+              </div>
+              <div className="job-title">AWS Certified Cloud Practitioner</div>
+              <div className="job-bullets">
+                <div className="job-bullet"><FontAwesomeIcon icon={faChevronRight} className='service-icon'/> Validated foundational knowledge of AWS Cloud concepts, core services, security, and pricing</div>
+                <div className="job-bullet">
+                <FontAwesomeIcon icon={faChevronRight} className='service-icon'/>
+                <a href="https://www.credly.com/badges/4e39021d-ffed-4947-b26b-2892df58b7e9/public_url" target="_blank" rel="noopener noreferrer">
+                  View Credential
+                </a>
+              </div>
+              </div>
             </div>
           </div>
         )}
