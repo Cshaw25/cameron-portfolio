@@ -21,7 +21,7 @@ const projects = [
     tools: ["Python", "React", "XGBoost", "FastAPI", "MySQL", "AWS EC2", "AWS Amplify", "AWS RDS"]
   },
   {
-    title: "Dashey",
+    title: "UniRee",
     image: null,
     date: "In Progress",
     live: null,
@@ -29,8 +29,13 @@ const projects = [
       "Full stack student marketplace platform (think Fiverr) for college campuses",
       "Students post side hustle services like tutoring, braiding, homework help, etc...",
       "Built for scale, clean UI specifically tailored for college entrepreneurs.",
+      "Building a Java/Spring Boot backend across service domains: Bookings, Feed, Profiles, Availability, Payments, and Dispute Resolution using REST controllers, JPA entities, and DTO-based request/response layers to keep API contracts decoupled from persistence.",
+      "Implementing layered security and validation: ownership-based authorization at the service layer, token verification via GCP Identity Platform, input validation, and GCP Cloud Armor for request-level filtering.",
+      "Planning to Integrate Stripe Connect to handle split payments between customers and service providers, using a delayed-capture model (funds authorized at booking, captured after service completion) to support fair refunds and dispute resolution.",
+      "Planning an AI-assisted dispute classification system that automatically labels reported issues (customer fault, provider fault, no-show, billing error) to speed up manual review and support consistent resolution outcomes."
+
     ],
-    tools: ["React", "Java", "SpringBoot", "MySQL", "AWS Services"]
+    tools: ["React", "Java", "SpringBoot", "MySQL", "GCP"]
   },
   {
     title: "TSU TIPS",

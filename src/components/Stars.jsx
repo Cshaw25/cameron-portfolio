@@ -11,7 +11,7 @@ function createStar(container) {
   star.style.top = `${Math.random() * 100}%`;
   star.style.left = `${Math.random() * 100}%`;
   star.style.animationDuration = `${Math.random() * 3 + 5}s`;
-  star.style.animationDelay = `${Math.random() * 3}s`;
+  star.style.animationDelay = `${Math.random() * 10}s`;
 
   star.addEventListener('animationend', () => {
     star.remove();
@@ -26,7 +26,7 @@ function Stars() {
 
   useEffect(() => {
     const container = starsRef.current;
-    const max_count = 4;
+    const max_count = 1;
     const count = Math.floor(Math.random() * max_count) + 1;
     for (let i = 0; i < count; i++) {
       createStar(container);

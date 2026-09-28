@@ -136,8 +136,8 @@ function Home() {
                   <p>A web app that uses my custom trained AI model to predict NBA game outcomes. Peaked at <span className='highlight'>70% Accuracy</span>. Live at <a href="https://truthnbets.com/" target="_blank" rel="noreferrer" className='project-link'>truthnbets.com  <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs"/></a></p>
                 </div>
                 <div className= "project">
-                  <div className="project-name">Dashey</div>
-                  <p> I'm building a full stack student marketplace platform, allowing student entruepeners to post and allow students to book appointments for a variety of buisnesses. <span className='highlight'>In progress</span></p>
+                  <div className="project-name">UniRee</div>
+                  <p> I'm building a full stack student marketplace platform, allowing student entrepreneurs to post and allow students to book appointments for a variety of businesses. <span className='highlight'>In progress</span></p>
                 </div>
                 <div className= "project">
                   <div className="project-name">TSU-TIPS</div>
